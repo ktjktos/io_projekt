@@ -10,34 +10,37 @@
 //
 
 
-
+import java.time.LocalDate;
 
 public class Material {
 	private String plik;
 	private String tytul;
 	private LocalDate data;
 	private boolean widocznosc;
-	public void Material(String plik, String tytul) {
-	
+	public Material(String plik, String tytul) {
+		this.plik = plik;
+		this.tytul = tytul;
+		this.data = LocalDate.now();
+		this.widocznosc = false;
 	}
 	
 	public String getPlik() {
-	
+		return this.plik;
 	}
 	
 	public String getTytul() {
-	
+		return this.tytul;
 	}
 	
 	public LocalDate getData() {
-	
+		return this.data;
 	}
 	
 	public boolean getWidocznosc() {
-	
+		return this.widocznosc;
 	}
 	
 	public void zmienWidocznosc() {
-	
+		this.widocznosc = !this.widocznosc;
 	}
 }
