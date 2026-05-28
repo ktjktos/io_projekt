@@ -115,11 +115,15 @@ public class Kurs {
 		}
 	}
 	
-	public void zmienWidocznoscMaterialu() {
+	public void zmienWidocznoscKursu() {
 		this.widocznosc = !widocznosc;
 	}
 	
 	public void setSylabus(String plik) {
 		this.sylabus = plik;
+	}
+
+	public String getId() {
+		return this.id;
 	}
 }
