@@ -1,13 +1,30 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello and welcome!"));
+public void main(String[] args) {
+    SystemZarzadzania system = new SystemZarzadzania();
+    Admin admin = new Admin();
+    BazaLogowan baza = new BazaLogowan("test123");
+    admin.zarejestrujUzytkownika("olafbog","lubieplacki",0);
+    admin.zarejestrujUzytkownika("olafbog2","lubieuczyc",1);
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+    Scanner scanner = new Scanner(System.in);
+    Optional<Uzytkownik> user = Optional.empty();
+    while (true) { // trzeba zrobic tak zeby byly 3 proby
+        System.out.println("Wpisz login oraz haslo"); // pierw patrz login czy istnieje potem haslo
+        String login,haslo;
+        login = scanner.nextLine().replace(" ", "");
+        haslo = scanner.nextLine().replace(" ", "");
+
+        user = baza.sprawdzWPliku(login,haslo);
+        if(user.isPresent()) {
+            break;
+        }
+    }
+    String ranga = baza.znajdzRange();
+    switch (ranga) {
+        case "0":
+            break;
+        case "1":
+            break;
+        case "2":
+            break;
     }
 }

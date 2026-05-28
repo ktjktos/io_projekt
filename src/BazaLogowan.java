@@ -10,16 +10,16 @@
 //
 
 
-
+import java.util.Optional;
 
 public class BazaLogowan {
 	private String plik;
-	public void BazaLogowan(String plik) {
-	
+	public BazaLogowan(String plik) {
+		this.plik = plik;
 	}
 	
-	public boolean sprawdzWPliku(String login, String haslo) {
-	
+	public Optional<Uzytkownik> sprawdzWPliku(String login, String haslo) {
+
 	}
 	
 	public void zapiszDoPliku() {

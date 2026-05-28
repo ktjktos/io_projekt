@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="db7a077c-65b8-4a55-8061-4a1fef1febfe" name="Changes" comment="">
+    <list default="true" id="db7a077c-65b8-4a55-8061-4a1fef1febfe" name="Changes" comment="up">
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BazaLogowan.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kurs.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Material.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SystemZarzadzania.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Uzytkownik.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Wykladowca.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BazaLogowan.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BazaLogowan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Kurs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kurs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SystemZarzadzania.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SystemZarzadzania.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,12 +27,12 @@
     &quot;assignee&quot;: &quot;ktjktos&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/ktjktos/io_projekt.git&quot;,
-    &quot;accountId&quot;: &quot;c09f9308-caf8-48ef-9ab7-5ed74ee5c7e7&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ktjktos/io_projekt.git",
+    "accountId": "60583de6-b47b-4b52-8106-c50cf73cb772"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0,
   &quot;fromUser&quot;: false
@@ -48,14 +48,15 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "26__05__2026",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/ktjkt/Desktop/Studia/InzynieriaOprogramowania/PROJEKT_IO",
-    "onboarding.tips.debug.path": "C:/Users/ktjkt/Desktop/Studia/InzynieriaOprogramowania/PROJEKT_IO/src/Main.java",
-    "project.structure.last.edited": "Project",
+    "onboarding.tips.debug.path": "C:/Users/a-dej/IdeaProjects/io_projekt/src/Main.java",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -79,7 +80,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.32098.37" />
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
       </set>
     </attachedChunks>
   </component>
@@ -93,15 +94,19 @@
     </task>
     <servers />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>10</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="up" />
+    <option name="LAST_COMMIT_MESSAGE" value="up" />
   </component>
 </project>

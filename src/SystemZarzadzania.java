@@ -10,7 +10,8 @@
 //
 
 
-
+import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class SystemZarzadzania {
 	private ArrayList<Kurs> kursy;
@@ -18,46 +19,51 @@ public class SystemZarzadzania {
 	private Kurs obecnyKurs;
 	private BazaLogowan bazaLogowan;
 	public void SystemZarzadzania() {
-	
+		this.kursy = new ArrayList<>();
+		this.uzytkownicy = new ArrayList<>();
 	}
 	
-	public void zmienHaslo() {
-	
+	public void zmienHasloDoKursu() {
+
 	}
 	
 	public void dodajMaterialy(String plik, String tytul) {
-	
+		this.obecnyKurs.dodajMaterialy(plik,tytul);
 	}
 	
 	public void usunMaterialy(String tytul) {
-	
+		this.obecnyKurs.usunMaterialy(tytul);
 	}
 	
 	public void wyswietlMaterialy() {
-	
+		this.obecnyKurs.wyswietlMaterialy();
 	}
 	
 	public void dodajTest(String plik, String tytul, LocalDate datakonca) {
-	
+		this.obecnyKurs.dodajTest(plik,tytul,datakonca);
 	}
 	
-	public void ocenTest(String login, Float ocena) {
-	
+	public void ocenTest(String nazwa, String login, Float ocena) {
+		this.obecnyKurs.ocenTest(nazwa,login,ocena);
 	}
 	
 	public void wyswietlTesty() {
-	
+		this.obecnyKurs.wyswietlTesty();
 	}
 	
-	public void zmienWidocznoscMaterialu() {
-	
+	public void zmienWidocznoscKursu() {
+		this.obecnyKurs.zmienWidocznoscKursu();
 	}
 	
-	public void setSylabus() {
-	
+	public void setSylabus(String plik) {
+		this.obecnyKurs.setSylabus(plik);
 	}
-	
-	public void zmienKurs() {
-	
+	public void wyswietlKurs() {
+		//wyswietl wszystko
+	}
+	public void zmienKurs(String id) {
+		for (Kurs k: kursy) {
+			if (k.getId().equals(id)) this.obecnyKurs = k;
+		}
 	}
 }
