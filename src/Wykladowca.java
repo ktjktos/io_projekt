@@ -10,7 +10,8 @@
 //
 
 
-
+import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Wykladowca extends Uzytkownik {
 	private ArrayList<Kurs> kursy;
@@ -30,7 +31,7 @@ public class Wykladowca extends Uzytkownik {
 	
 	}
 	
-	public String): void usunMaterialyplik() {
+	public void usunMaterialy(String plik) {
 	
 	}
 	
