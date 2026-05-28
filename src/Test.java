@@ -10,7 +10,8 @@
 //
 
 
-
+import java.time.LocalDate;
+import java.util.HashMap;
 
 public class Test {
 	private String plik;
@@ -20,43 +21,84 @@ public class Test {
 	private HashMap<String, Float> oceny;
 	private HashMap<String, String> rozwiazania;
 	private boolean widocznosc;
-	public void Test(String plik, String tytul, LocalDate dataKonca) {
-	
+	public Test(String plik, String tytul, LocalDate dataKonca) {
+		this.oceny = new HashMap<>();
+		this.rozwiazania = new HashMap<>();
+		this.plik = plik;
+		this.tytul = tytul;
+		this.dataKonca = dataKonca;
+		this.widocznosc = false;
 	}
 	
-	public void ocen(String login, Object ocena Float) {
-	
+	public void ocen(String login, Float ocena) {
+		this.oceny.put(login,ocena);
 	}
 	
 	public String getPlik() {
-	
+		return this.plik;
 	}
 	
 	public String getTytul() {
-	
+		return this.tytul;
 	}
 	
 	public LocalDate getDataWyslania() {
-	
+		return this.dataWyslania;
 	}
 	
 	public LocalDate getDataKonca() {
-	
+		return this.dataKonca;
 	}
 	
 	public String getOceny() {
-	
+		if (this.oceny == null || this.oceny.isEmpty()) {
+			return "Brak ocen";
+		}
+
+		StringBuilder wynik = new StringBuilder();
+		for (String login : this.oceny.keySet()) {
+			wynik.append(login)
+					.append(": ")
+					.append(this.oceny.get(login))
+					.append("\n");
+		}
+
+		return wynik.toString();
 	}
 	
-	public Float getOcena() {
-	
+	public Float getOcena(String login) {
+		return this.oceny.get(login);
 	}
 	
-	public boolean getWidcznosc() {
-	
+	public boolean getWidocznosc() {
+		return this.widocznosc;
 	}
 	
 	public void zmienWidocznosc() {
-	
+		this.widocznosc = !this.widocznosc;
 	}
+
+	public String getRozwiazania() {
+		if (this.rozwiazania == null || this.rozwiazania.isEmpty()) {
+			return "Brak rozwiazan";
+		}
+
+		StringBuilder wynik = new StringBuilder();
+		for (String login : this.rozwiazania.keySet()) {
+			wynik.append(login)
+					.append(": ")
+					.append(this.rozwiazania.get(login))
+					.append("\n");
+		}
+		return wynik.toString();
+	}
+
+	public String getRozwiazanie(String login) {
+		return this.rozwiazania.get(login);
+	}
+	public void wyslijRozwiazanie(String login, String rozwiazanie) {
+		this.rozwiazania.put(login, rozwiazanie);
+		this.dataWyslania = LocalDate.now();
+	}
+
 }
