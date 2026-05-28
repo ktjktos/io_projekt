@@ -30,7 +30,6 @@ public class BazaLogowan {
 		}
 	}
 
-	//TODO w diagramie klas prywatna metoda do hashowania
 	private String hashujHaslo(String haslo) throws NoSuchAlgorithmException {
 		MessageDigest digest = MessageDigest.getInstance("SHA-256");
 		byte[] encodedhash = digest.digest(haslo.getBytes(StandardCharsets.UTF_8));
@@ -43,26 +42,28 @@ public class BazaLogowan {
 		return hexString.toString();
 	}
 
-	//TODO int poziomUprawnien w diagramie klas i rodzaj zwracanych danych
-	public Optional<Uzytkownik> sprawdzWPliku(String login, String haslo, int poziomUprawnien) {
+	public Optional<Uzytkownik> sprawdzWPliku(String login, String haslo) {
 		try {
 			String hexString = hashujHaslo(haslo);
-			String szukanaLinia = login + ";" + hexString + ";" + poziomUprawnien;
+			String oczekiwanyPoczatek = login + ";" + hexString + ";";
 
 			List<String> linie = Files.readAllLines(Paths.get(this.plik));
 			for (String linia : linie) {
-				if (linia.equals(szukanaLinia)) {
-					Uzytkownik uzytkownik = stworzUzytkownika(login, poziomUprawnien);
-					return Optional.of(uzytkownik);
+				if (linia.startsWith(oczekiwanyPoczatek)) {
+					String[] czesci = linia.split(";");
+					if (czesci.length == 3) {
+						int poziomUprawnien = Integer.parseInt(czesci[2]);
+						Uzytkownik uzytkownik = stworzUzytkownika(login, poziomUprawnien);
+						return Optional.of(uzytkownik);
+					}
 				}
 			}
-		} catch (IOException | NoSuchAlgorithmException e) {
+		} catch (IOException | NoSuchAlgorithmException | NumberFormatException e) {
 			System.err.println("Blad: " + e.getMessage());
 		}
 		return Optional.empty();
 	}
 
-	//TODO w diagramie klas prywatna metoda do tworzenia odpowiedniego typu uzytkownika (factory)
 	private Uzytkownik stworzUzytkownika(String login, int poziomUprawnien) {
 		return switch (poziomUprawnien) {
 			case 2 -> new Admin();
@@ -72,7 +73,6 @@ public class BazaLogowan {
 		};
 	}
 
-	//TODO int poziomUprawnien w diagramie klas
 	public boolean zarejestrujUzytkownika(String login, String haslo, int poziomUprawnien) {
 		try {
 			if (!Files.exists(Paths.get(this.plik))) {
