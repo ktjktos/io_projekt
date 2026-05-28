@@ -66,9 +66,9 @@ public class BazaLogowan {
 
 	private Uzytkownik stworzUzytkownika(String login, int poziomUprawnien) {
 		return switch (poziomUprawnien) {
-			case 2 -> new Admin();
-			case 1 -> new Wykladowca();
-			case 0 -> new Student();
+			case 2 -> new Admin(login);
+			case 1 -> new Wykladowca(login);
+			case 0 -> new Student(login);
 			default -> throw new IllegalArgumentException("Nieznany poziom uprawnień: " + poziomUprawnien);
 		};
 	}

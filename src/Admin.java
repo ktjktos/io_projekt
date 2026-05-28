@@ -13,12 +13,12 @@
 
 
 public class Admin extends Uzytkownik {
-	public void Admin() {
-	
+	public Admin(String login) {
+		super(login);
 	}
 	
 	public boolean zarejestrujUzytkownika(String login, String haslo, int typ) {
-	
+
 	}
 	
 	public boolean usunUzytkownika(String login) {

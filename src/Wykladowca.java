@@ -15,8 +15,9 @@ import java.util.ArrayList;
 
 public class Wykladowca extends Uzytkownik {
 	private ArrayList<Kurs> kursy;
-	public void Wykladowca() {
-	
+
+	public Wykladowca(String login) {
+		super(login);
 	}
 	
 	public void utworzKurs(String nazwa, String haslo) {

@@ -14,8 +14,9 @@ import java.util.ArrayList;
 
 public class Student extends Uzytkownik {
 	private ArrayList<Kurs> kursy;
-	public void Student() {
-	
+
+	public Student(String login) {
+		super(login);
 	}
 	
 	public void wybierzObecnyKurs(int id) {

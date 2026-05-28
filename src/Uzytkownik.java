@@ -14,7 +14,8 @@
 
 public class Uzytkownik {
 	private String login;
-	public Uzytkownik(String login, String haslo) {
+	//TODO USUNĄŁEM HASŁO Z CREATORA
+	public Uzytkownik(String login) {
 
 	}
 	
