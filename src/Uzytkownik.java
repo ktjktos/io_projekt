@@ -14,8 +14,8 @@
 
 public class Uzytkownik {
 	private String login;
-	public void Uzytkownik(String login, String haslo) {
-	
+	public Uzytkownik(String login, String haslo) {
+
 	}
 	
 	public boolean zalogujSie(String login, String haslo) {
